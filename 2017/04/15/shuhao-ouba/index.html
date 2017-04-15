@@ -11,17 +11,17 @@
     
 
     
-    <meta name="description" content="为什么要搭建博客系统 有助于养成良好的习惯 有助于学习记录 有助于提高薪资   环境准备 安装git 安装NodeJS   安装1npm install hexo-cli -g  初始化1234hexo init &amp;lt;folder&amp;gt; cd &amp;lt;folder&amp;gt;npm installhexo server -p &amp;lt;port&amp;gt;">
+    <meta name="description" content="为什么要搭建博客系统 有助于养成良好的习惯 有助于学习记录 有助于提高薪资   环境准备 安装git 安装NodeJS   安装1npm install hexo-cli -g  初始化1234hexo init &amp;lt;folder&amp;gt; cd &amp;lt;folder&amp;gt;npm installhexo server -p &amp;lt;port&amp;gt;  如何使用ssh链接到github 找到gi">
 <meta name="keywords">
 <meta property="og:type" content="article">
 <meta property="og:title" content="使用hexo搭建博客系统">
 <meta property="og:url" content="http://shuhaoouba.github.io/2017/04/15/shuhao-ouba/index.html">
 <meta property="og:site_name" content="Hexo">
-<meta property="og:description" content="为什么要搭建博客系统 有助于养成良好的习惯 有助于学习记录 有助于提高薪资   环境准备 安装git 安装NodeJS   安装1npm install hexo-cli -g  初始化1234hexo init &amp;lt;folder&amp;gt; cd &amp;lt;folder&amp;gt;npm installhexo server -p &amp;lt;port&amp;gt;">
-<meta property="og:updated_time" content="2017-04-15T10:20:48.822Z">
+<meta property="og:description" content="为什么要搭建博客系统 有助于养成良好的习惯 有助于学习记录 有助于提高薪资   环境准备 安装git 安装NodeJS   安装1npm install hexo-cli -g  初始化1234hexo init &amp;lt;folder&amp;gt; cd &amp;lt;folder&amp;gt;npm installhexo server -p &amp;lt;port&amp;gt;  如何使用ssh链接到github 找到gi">
+<meta property="og:updated_time" content="2017-04-15T10:25:15.615Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="使用hexo搭建博客系统">
-<meta name="twitter:description" content="为什么要搭建博客系统 有助于养成良好的习惯 有助于学习记录 有助于提高薪资   环境准备 安装git 安装NodeJS   安装1npm install hexo-cli -g  初始化1234hexo init &amp;lt;folder&amp;gt; cd &amp;lt;folder&amp;gt;npm installhexo server -p &amp;lt;port&amp;gt;">
+<meta name="twitter:description" content="为什么要搭建博客系统 有助于养成良好的习惯 有助于学习记录 有助于提高薪资   环境准备 安装git 安装NodeJS   安装1npm install hexo-cli -g  初始化1234hexo init &amp;lt;folder&amp;gt; cd &amp;lt;folder&amp;gt;npm installhexo server -p &amp;lt;port&amp;gt;  如何使用ssh链接到github 找到gi">
 
     
     <link rel="alternative" href="/atom.xml" title="Hexo" type="application/atom+xml">
@@ -95,7 +95,7 @@
 		<div id="toc" class="toc-article">
 			<strong class="toc-title">文章目录</strong>
 		
-			<ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#为什么要搭建博客系统"><span class="toc-number">1.</span> <span class="toc-text">为什么要搭建博客系统</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#环境准备"><span class="toc-number">2.</span> <span class="toc-text">环境准备</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#安装"><span class="toc-number">3.</span> <span class="toc-text">安装</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#初始化"><span class="toc-number">4.</span> <span class="toc-text">初始化</span></a></li></ol>
+			<ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#为什么要搭建博客系统"><span class="toc-number">1.</span> <span class="toc-text">为什么要搭建博客系统</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#环境准备"><span class="toc-number">2.</span> <span class="toc-text">环境准备</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#安装"><span class="toc-number">3.</span> <span class="toc-text">安装</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#初始化"><span class="toc-number">4.</span> <span class="toc-text">初始化</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#如何使用ssh链接到github"><span class="toc-number">5.</span> <span class="toc-text">如何使用ssh链接到github</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#把初始化的博客系统，上传到github"><span class="toc-number">6.</span> <span class="toc-text">把初始化的博客系统，上传到github</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#替换主题，暂时使用jacman主题"><span class="toc-number">7.</span> <span class="toc-text">替换主题，暂时使用jacman主题</span></a></li></ol>
 		
 		</div>
 		
@@ -112,7 +112,26 @@
 <hr>
 <h2 id="安装"><a href="#安装" class="headerlink" title="安装"></a>安装</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">npm install hexo-cli -g</div></pre></td></tr></table></figure>
 <hr>
-<h2 id="初始化"><a href="#初始化" class="headerlink" title="初始化"></a>初始化</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">hexo init &lt;folder&gt; </div><div class="line">cd &lt;folder&gt;</div><div class="line">npm install</div><div class="line">hexo server -p &lt;port&gt;</div></pre></td></tr></table></figure>  
+<h2 id="初始化"><a href="#初始化" class="headerlink" title="初始化"></a>初始化</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">hexo init &lt;folder&gt; </div><div class="line">cd &lt;folder&gt;</div><div class="line">npm install</div><div class="line">hexo server -p &lt;port&gt;</div></pre></td></tr></table></figure>
+<hr>
+<h2 id="如何使用ssh链接到github"><a href="#如何使用ssh链接到github" class="headerlink" title="如何使用ssh链接到github"></a>如何使用ssh链接到github</h2><ul>
+<li>找到git根目录，双击打开git-bash.exe</li>
+<li>输入 cd ~/.ssh</li>
+<li>生成一个新的 ssh key   ssh-keygen -t rsa -C “邮箱”</li>
+<li>验证是否能够链接到github ssh -T git@github.com</li>
+</ul>
+<hr>
+<h2 id="把初始化的博客系统，上传到github"><a href="#把初始化的博客系统，上传到github" class="headerlink" title="把初始化的博客系统，上传到github"></a>把初始化的博客系统，上传到github</h2><ul>
+<li>修改我们博客系统根目录里面的配置文件（_config.yml)</li>
+<li>安装hexo-deployer-git插件（npm安装）</li>
+<li>上传（hexo deploy -g）</li>
+</ul>
+<hr>
+<h2 id="替换主题，暂时使用jacman主题"><a href="#替换主题，暂时使用jacman主题" class="headerlink" title="替换主题，暂时使用jacman主题"></a>替换主题，暂时使用jacman主题</h2><ul>
+<li>使用git下载主题到博客根目录</li>
+<li>在_config中配置主题</li>
+</ul>
+  
 	</div>
 		<footer class="article-footer clearfix">
 <div class="article-catetags">
@@ -156,7 +175,7 @@
   <div id="toc" class="toc-aside">
   <strong class="toc-title">文章目录</strong>
  
- <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#为什么要搭建博客系统"><span class="toc-number">1.</span> <span class="toc-text">为什么要搭建博客系统</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#环境准备"><span class="toc-number">2.</span> <span class="toc-text">环境准备</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#安装"><span class="toc-number">3.</span> <span class="toc-text">安装</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#初始化"><span class="toc-number">4.</span> <span class="toc-text">初始化</span></a></li></ol>
+ <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#为什么要搭建博客系统"><span class="toc-number">1.</span> <span class="toc-text">为什么要搭建博客系统</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#环境准备"><span class="toc-number">2.</span> <span class="toc-text">环境准备</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#安装"><span class="toc-number">3.</span> <span class="toc-text">安装</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#初始化"><span class="toc-number">4.</span> <span class="toc-text">初始化</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#如何使用ssh链接到github"><span class="toc-number">5.</span> <span class="toc-text">如何使用ssh链接到github</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#把初始化的博客系统，上传到github"><span class="toc-number">6.</span> <span class="toc-text">把初始化的博客系统，上传到github</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#替换主题，暂时使用jacman主题"><span class="toc-number">7.</span> <span class="toc-text">替换主题，暂时使用jacman主题</span></a></li></ol>
  
   </div>
 

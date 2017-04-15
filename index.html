@@ -103,6 +103,25 @@
 <h2 id="安装"><a href="#安装" class="headerlink" title="安装"></a>安装</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">npm install hexo-cli -g</div></pre></td></tr></table></figure>
 <hr>
 <h2 id="初始化"><a href="#初始化" class="headerlink" title="初始化"></a>初始化</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">hexo init &lt;folder&gt; </div><div class="line">cd &lt;folder&gt;</div><div class="line">npm install</div><div class="line">hexo server -p &lt;port&gt;</div></pre></td></tr></table></figure>
+<hr>
+<h2 id="如何使用ssh链接到github"><a href="#如何使用ssh链接到github" class="headerlink" title="如何使用ssh链接到github"></a>如何使用ssh链接到github</h2><ul>
+<li>找到git根目录，双击打开git-bash.exe</li>
+<li>输入 cd ~/.ssh</li>
+<li>生成一个新的 ssh key   ssh-keygen -t rsa -C “邮箱”</li>
+<li>验证是否能够链接到github ssh -T git@github.com</li>
+</ul>
+<hr>
+<h2 id="把初始化的博客系统，上传到github"><a href="#把初始化的博客系统，上传到github" class="headerlink" title="把初始化的博客系统，上传到github"></a>把初始化的博客系统，上传到github</h2><ul>
+<li>修改我们博客系统根目录里面的配置文件（_config.yml)</li>
+<li>安装hexo-deployer-git插件（npm安装）</li>
+<li>上传（hexo deploy -g）</li>
+</ul>
+<hr>
+<h2 id="替换主题，暂时使用jacman主题"><a href="#替换主题，暂时使用jacman主题" class="headerlink" title="替换主题，暂时使用jacman主题"></a>替换主题，暂时使用jacman主题</h2><ul>
+<li>使用git下载主题到博客根目录</li>
+<li>在_config中配置主题</li>
+</ul>
+
         
         
         <p class="article-more-link">
