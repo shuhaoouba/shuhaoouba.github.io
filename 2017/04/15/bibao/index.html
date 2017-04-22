@@ -17,7 +17,7 @@
 <!--<![endif]-->
 
 <head>
-  <title>使用hexo搭建博客系统 | Hexo</title>
+  <title>HTML+css+JavaScript | Hexo</title>
   <!-- Meta data -->
     <meta http-equiv="Content-Type" content="text/html" charset="UTF-8" >
     <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
@@ -172,46 +172,76 @@
         <div class="row col-md-offset-2">
             <div class="col-md-8">
     			<span class="post-meta">
-      <time datetime="2017-04-15T10:14:28.000Z" itemprop="datePublished">
+      <time datetime="2017-04-15T09:20:42.000Z" itemprop="datePublished">
           2017-04-15
       </time>
     
 </span>
-                <h1>使用hexo搭建博客系统</h1>
+                <h1>HTML+css+JavaScript</h1>
             </div>
         </div>
         <div class="col-md-8 col-md-offset-2">
-      		<h2 id="为什么要搭建博客系统"><a href="#为什么要搭建博客系统" class="headerlink" title="为什么要搭建博客系统"></a>为什么要搭建博客系统</h2><ul>
-<li>有助于养成良好的习惯</li>
-<li>有助于学习记录</li>
-<li>有助于提高薪资</li>
-</ul>
-<hr>
-<h2 id="环境准备"><a href="#环境准备" class="headerlink" title="环境准备"></a>环境准备</h2><ul>
-<li>安装git</li>
-<li>安装NodeJS</li>
-</ul>
-<hr>
-<h2 id="安装"><a href="#安装" class="headerlink" title="安装"></a>安装</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">npm install hexo-cli -g</div></pre></td></tr></table></figure>
-<hr>
-<h2 id="初始化"><a href="#初始化" class="headerlink" title="初始化"></a>初始化</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">hexo init &lt;folder&gt; </div><div class="line">cd &lt;folder&gt;</div><div class="line">npm install</div><div class="line">hexo server -p &lt;port&gt;</div></pre></td></tr></table></figure>
-<hr>
-<h2 id="如何使用ssh链接到github"><a href="#如何使用ssh链接到github" class="headerlink" title="如何使用ssh链接到github"></a>如何使用ssh链接到github</h2><ul>
-<li>找到git根目录，双击打开git-bash.exe</li>
-<li>输入 cd ~/.ssh</li>
-<li>生成一个新的 ssh key   ssh-keygen -t rsa -C “邮箱”</li>
-<li>验证是否能够链接到github ssh -T git@github.com</li>
-</ul>
-<hr>
-<h2 id="把初始化的博客系统，上传到github"><a href="#把初始化的博客系统，上传到github" class="headerlink" title="把初始化的博客系统，上传到github"></a>把初始化的博客系统，上传到github</h2><ul>
-<li>修改我们博客系统根目录里面的配置文件（_config.yml)</li>
-<li>安装hexo-deployer-git插件（npm安装）</li>
-<li>上传（hexo deploy -g）</li>
-</ul>
-<hr>
-<h2 id="替换主题，暂时使用jacman主题"><a href="#替换主题，暂时使用jacman主题" class="headerlink" title="替换主题，暂时使用jacman主题"></a>替换主题，暂时使用jacman主题</h2><ul>
-<li>使用git下载主题到博客根目录</li>
-<li>在_config中配置主题</li>
+      		<h2 id="闭包是什么？"><a href="#闭包是什么？" class="headerlink" title="闭包是什么？"></a>闭包是什么？</h2><ol>
+<li>函数嵌套函数。</li>
+<li>内部变量或参数能访问外部变量和参数，外部不能访问内部变量或参数。</li>
+<li>内部变量或参数始终保存在内存中。</li>
+<li>适用于封装函数，防止变量污染。</li>
+<li>但内部参数过多的话会因为内存而出现卡顿。<h2 id="盒子模型"><a href="#盒子模型" class="headerlink" title="盒子模型"></a>盒子模型</h2>标准盒子模型：margin(外边距)+padding(内边距)+border(边框)+content(内容)，content部分不包含其他部分。<br>IE盒子模型：margin(外边距)+padding(内边距)+border(边框)+content(内容)，content部分包含了padding和border。<h2 id="JavaScript原型链"><a href="#JavaScript原型链" class="headerlink" title="JavaScript原型链"></a>JavaScript原型链</h2></li>
+<li>原型链的形成真正是靠<strong>proto</strong> 而非prototype，当JS引擎执行对象的方法时，先查找对象本身是否存在该方法，如果不存在，会在原型链上查找，但不会查找自身的prototype。</li>
+<li>一个对象的<strong>proto</strong>记录着自己的原型链，决定了自身的数据类型，改变<strong>proto</strong>就等于改变对象的数据类型。</li>
+<li>函数的prototype不属于自身的原型链，它是子类创建的核心，决定了子类的数据类型，是连接子类原型链的桥梁。</li>
+<li>在原型对象上定义方法和属性的目的是为了被子类继承和使用。<h2 id="JavaScript面向对象"><a href="#JavaScript面向对象" class="headerlink" title="JavaScript面向对象"></a>JavaScript面向对象</h2></li>
+<li>一般具有封装，继承，多态的特性</li>
+<li>创建对象有工厂模式，构造函数模式，原型模式，组合构造函数及原型模式，动态原型模式。<h2 id="JavaScript继承"><a href="#JavaScript继承" class="headerlink" title="JavaScript继承"></a>JavaScript继承</h2><h3 id="1-原型链继承"><a href="#1-原型链继承" class="headerlink" title="1.原型链继承"></a>1.原型链继承</h3></li>
+</ol>
+<ul>
+<li><p>核心： 将父类的实例作为子类的原型</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div></pre></td><td class="code"><pre><div class="line">function Cat()&#123; </div><div class="line">&#125;</div><div class="line">Cat.prototype = new Animal();</div><div class="line">Cat.prototype.name = &apos;cat&apos;;</div><div class="line"></div><div class="line">//　Test Code</div><div class="line">var cat = new Cat();</div><div class="line">console.log(cat.name);</div><div class="line">console.log(cat.eat(&apos;fish&apos;));</div><div class="line">console.log(cat.sleep());</div><div class="line">console.log(cat instanceof Animal); //true </div><div class="line">console.log(cat instanceof Cat); //true</div></pre></td></tr></table></figure>
+</li>
+<li><p>特点：</p>
+<ol>
+<li>非常纯粹的继承关系，实例是子类的实例，也是父类的实例<br>2.父类新增原型方法/原型属性，子类都能访问到<br>3.简单，易于实现</li>
+</ol>
+</li>
+<li>缺点：<br>  1.要想为子类新增属性和方法，必须要在new Animal()这样的语句之后执行，不能放到构造器中<br>  2.无法实现多继承<br>  3.来自原型对象的引用属性是所有实例共享的（详细请看附录代码： 示例1）<br>  4.创建子类实例时，无法向父类构造函数传参<h3 id="构造函数继承"><a href="#构造函数继承" class="headerlink" title="构造函数继承"></a>构造函数继承</h3></li>
+<li><p>核心：使用父类的构造函数来增强子类实例，等于是复制父类的实例属性给子类（没用到原型）</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div></pre></td><td class="code"><pre><div class="line">function Cat(name)&#123;</div><div class="line">  Animal.call(this);</div><div class="line">  this.name = name || &apos;Tom&apos;;</div><div class="line">&#125;</div><div class="line"></div><div class="line">// Test Code</div><div class="line">var cat = new Cat();</div><div class="line">console.log(cat.name);</div><div class="line">console.log(cat.sleep());</div><div class="line">console.log(cat instanceof Animal); // false</div><div class="line">console.log(cat instanceof Cat); // true</div></pre></td></tr></table></figure>
+</li>
+<li><p>特点：</p>
+<ol>
+<li>解决了1中，子类实例共享父类引用属性的问题</li>
+<li>创建子类实例时，可以向父类传递参数</li>
+<li>可以实现多继承（call多个父类对象）</li>
+</ol>
+</li>
+<li>缺点：<ol>
+<li>实例并不是父类的实例，只是子类的实例</li>
+<li>只能继承父类的实例属性和方法，不能继承原型属性/方法</li>
+<li>无法实现函数复用，每个子类都有父类实例函数的副本，影响性能<h3 id="实例继承"><a href="#实例继承" class="headerlink" title="实例继承"></a>实例继承</h3></li>
+</ol>
+</li>
+<li><p>核心：为父类实例添加新特性，作为子类实例返回</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div></pre></td><td class="code"><pre><div class="line">function Cat(name)&#123;</div><div class="line">  var instance = new Animal();</div><div class="line">  instance.name = name || &apos;Tom&apos;;</div><div class="line">  return instance;</div><div class="line">&#125;</div><div class="line"></div><div class="line">// Test Code</div><div class="line">var cat = new Cat();</div><div class="line">console.log(cat.name);</div><div class="line">console.log(cat.sleep());</div><div class="line">console.log(cat instanceof Animal); // true</div><div class="line">console.log(cat instanceof Cat); // false</div></pre></td></tr></table></figure>
+</li>
+<li><p>特点：<br>  1.不限制调用方式，不管是new 子类()还是子类(),返回的对象具有相同的效果</p>
+</li>
+<li><p>缺点：<br>  1.实例是父类的实例，不是子类的实例<br>  2.不支持多继承</p>
+<h2 id="html5本地存储"><a href="#html5本地存储" class="headerlink" title="html5本地存储"></a>html5本地存储</h2><h3 id="1-sessionStorage"><a href="#1-sessionStorage" class="headerlink" title="1 sessionStorage"></a>1 sessionStorage</h3><ol>
+<li>cookie的存储限制在了4k之内，相比来说，session storage有了更大的存储空间，但至于具体多大，这要参照浏览器厂商的具体实现。</li>
+<li>cookie有一个机制，就是在每次客户端请求服务器的时候都会将cookie发送给服务器，这无疑会做很多不必要的操作，因为并不是每次请求服务器都需要cookie的所有信息，而session storage很好的解决了这个问题，它不是采取自动发送的方式，这样就减少了不必要的工作。</li>
+<li>通过sessionStorage所存储数据的生命周期，和Session类似，关闭浏览器（或标签页）后数据就不存在了。但刷新页面或使用“前进”、“后退按钮”后sessionStorage仍然存在。</li>
+<li>session storage每个窗口的值都是独立的（每个窗口都有自己的数据），它的数据会随着窗口的关闭而消失，窗口间的sessionStorage也是不可以共享的。</li>
+<li>setItem中的key、value使用的是字符串的形式进行存储的。也就是说如果有如下的代码：setItem(‘count’, 1);通过getItem(‘count’) + 5 得到的将不是预期的6(整数)，而是’16’(字符串)。</li>
+<li>再次使用setItem设置已经存在的key的value时，新的值将替代旧的值。</li>
+<li>当存储中的数据发生改变时，会触发相应的事件（window.onstorage），但目前各浏览器对此事件的支持并不完善，暂时可以忽略。<h3 id="2-localStorage"><a href="#2-localStorage" class="headerlink" title="2 localStorage"></a>2 localStorage</h3></li>
+<li>local storage把只把数据存储在了客户端使用，不会发送的服务器上（除非你故意这样做）。</li>
+<li>而且对于某一个域下来说，local storage是共享的（多个窗口共享一个“数据库”）。</li>
+<li>localStorage用于持久化的本地存储，除非主动删除数据，否则数据是永远不会过期的<h3 id="3-sessionStorage和localStorage"><a href="#3-sessionStorage和localStorage" class="headerlink" title="3 sessionStorage和localStorage"></a>3 sessionStorage和localStorage</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">1.  window.sessionStorage.name = &apos;rainman&apos;;           // 赋值    </div><div class="line">2.  window.sessionStorage.setItem(&apos;name&apos;,&apos;cnblogs&apos;);  // 赋值    </div><div class="line">3.  window.sessionStorage.getItem(&apos;name&apos;);            // 取值    </div><div class="line">4.  window.sessionStorage.removeItem(&apos;name&apos;);         // 移除值    </div><div class="line">5.  window.sessionStorage.clear();                    // 删除所有sessionStorage</div></pre></td></tr></table></figure>
+</li>
+</ol>
+</li>
+<li><p>它们的方法是都一样的</p>
+</li>
 </ul>
 
             <div class="clearfix"></div>
@@ -219,10 +249,14 @@
         </div>
         <nav class="pagination" role="pagination">
     
-    <a class="pull-left" href="/2017/04/15/bibao/" style="float: left;">
-        ← HTML+css+JavaScript
+    <a class="pull-left" href="/2017/04/15/shuhao/" style="float: left;">
+        ← 感想
     </a>
     
+    
+    <a class="pull-right" href="/2017/04/15/shuhao-ouba/">
+        使用hexo搭建博客系统 →
+    </a>
     
 </nav>
 
