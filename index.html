@@ -5,7 +5,7 @@
   
 
 
-<html class="theme-next mist use-motion" lang="zh-CH">
+<html class="theme-next mist use-motion" lang="zh-Hans">
 <head>
   <meta charset="UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=edge" />
@@ -125,12 +125,12 @@
   var CONFIG = {
     root: '/',
     scheme: 'Mist',
-    sidebar: {"position":"left","display":"post","offset":12,"offset_float":0,"b2t":false,"scrollpercent":false},
+    sidebar: {"position":"right","display":"always","offset":12,"offset_float":0,"b2t":false,"scrollpercent":false},
     fancybox: true,
     motion: true,
     duoshuo: {
       userId: '0',
-      author: 'Author'
+      author: '博主'
     },
     algolia: {
       applicationID: '',
@@ -153,7 +153,7 @@
   <title>S.</title>
 </head>
 
-<body itemscope itemtype="http://schema.org/WebPage" lang="zh-CH">
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
 
   
 
@@ -175,7 +175,7 @@
     
   
 
-  <div class="container sidebar-position-left 
+  <div class="container sidebar-position-right 
    page-home 
  ">
     <div class="headband"></div>
@@ -218,7 +218,17 @@
             
               <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
             
-            Startseite
+            首页
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-categories">
+          <a href="/categories" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-th"></i> <br />
+            
+            分类
           </a>
         </li>
       
@@ -228,7 +238,7 @@
             
               <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
             
-            Archiv
+            归档
           </a>
         </li>
       
@@ -238,7 +248,17 @@
             
               <i class="menu-item-icon fa fa-fw fa-tags"></i> <br />
             
-            Tags
+            标签
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-commonweal">
+          <a href="/404.html" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-heartbeat"></i> <br />
+            
+            公益404
           </a>
         </li>
       
@@ -308,9 +328,9 @@
                 <i class="fa fa-calendar-o"></i>
               </span>
               
-                <span class="post-meta-item-text">Veröffentlicht am</span>
+                <span class="post-meta-item-text">发表于</span>
               
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2017-04-22T15:30:42+08:00">
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-04-22T15:30:42+08:00">
                 2017-04-22
               </time>
             
@@ -320,6 +340,28 @@
             
           </span>
 
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/web前端/" itemprop="url" rel="index">
+                    <span itemprop="name">web前端</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
           
 
           
@@ -347,84 +389,23 @@
       
         
           
-            <h2 id="闭包是什么？"><a href="#闭包是什么？" class="headerlink" title="闭包是什么？"></a>闭包是什么？</h2><ol>
-<li>函数嵌套函数。</li>
-<li>内部变量或参数能访问外部变量和参数，外部不能访问内部变量或参数。</li>
-<li>内部变量或参数始终保存在内存中。</li>
-<li>适用于封装函数，防止变量污染。</li>
-<li>但内部参数过多的话会因为内存而出现卡顿。</li>
-</ol>
-<hr>
-<h2 id="盒子模型"><a href="#盒子模型" class="headerlink" title="盒子模型"></a>盒子模型</h2><p>标准盒子模型：margin(外边距)+padding(内边距)+border(边框)+content(内容)，content部分不包含其他部分。<br>IE盒子模型：margin(外边距)+padding(内边距)+border(边框)+content(内容)，content部分包含了padding和border。</p>
-<hr>
-<h2 id="JavaScript原型链"><a href="#JavaScript原型链" class="headerlink" title="JavaScript原型链"></a>JavaScript原型链</h2><ol>
-<li>原型链的形成真正是靠<strong>proto</strong> 而非prototype，当JS引擎执行对象的方法时，先查找对象本身是否存在该方法，如果不存在，会在原型链上查找，但不会查找自身的prototype。</li>
-<li>一个对象的<strong>proto</strong>记录着自己的原型链，决定了自身的数据类型，改变<strong>proto</strong>就等于改变对象的数据类型。</li>
-<li>函数的prototype不属于自身的原型链，它是子类创建的核心，决定了子类的数据类型，是连接子类原型链的桥梁。</li>
-<li>在原型对象上定义方法和属性的目的是为了被子类继承和使用。</li>
-</ol>
-<hr>
-<h2 id="JavaScript面向对象"><a href="#JavaScript面向对象" class="headerlink" title="JavaScript面向对象"></a>JavaScript面向对象</h2><ol>
-<li>一般具有封装，继承，多态的特性</li>
-<li>创建对象有工厂模式，构造函数模式，原型模式，组合构造函数及原型模式，动态原型模式。</li>
-</ol>
-<hr>
-<h2 id="JavaScript继承"><a href="#JavaScript继承" class="headerlink" title="JavaScript继承"></a>JavaScript继承</h2><h3 id="原型链继承"><a href="#原型链继承" class="headerlink" title="原型链继承"></a>原型链继承</h3><ul>
-<li><p>核心： 将父类的实例作为子类的原型</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div></pre></td><td class="code"><pre><div class="line">function Cat()&#123; </div><div class="line">&#125;</div><div class="line">Cat.prototype = new Animal();</div><div class="line">Cat.prototype.name = &apos;cat&apos;;</div><div class="line"></div><div class="line">//　Test Code</div><div class="line">var cat = new Cat();</div><div class="line">console.log(cat.name);</div><div class="line">console.log(cat.eat(&apos;fish&apos;));</div><div class="line">console.log(cat.sleep());</div><div class="line">console.log(cat instanceof Animal); //true </div><div class="line">console.log(cat instanceof Cat); //true</div></pre></td></tr></table></figure>
-</li>
-<li><p>特点：</p>
-<ol>
-<li>非常纯粹的继承关系，实例是子类的实例，也是父类的实例<br>2.父类新增原型方法/原型属性，子类都能访问到<br>3.简单，易于实现</li>
-</ol>
-</li>
-<li>缺点：<br>  1.要想为子类新增属性和方法，必须要在new Animal()这样的语句之后执行，不能放到构造器中<br>  2.无法实现多继承<br>  3.来自原型对象的引用属性是所有实例共享的（详细请看附录代码： 示例1）<br>  4.创建子类实例时，无法向父类构造函数传参</li>
-</ul>
-<hr>
-<h3 id="构造函数继承"><a href="#构造函数继承" class="headerlink" title="构造函数继承"></a>构造函数继承</h3><ul>
-<li><p>核心：使用父类的构造函数来增强子类实例，等于是复制父类的实例属性给子类（没用到原型）</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div></pre></td><td class="code"><pre><div class="line">function Cat(name)&#123;</div><div class="line">  Animal.call(this);</div><div class="line">  this.name = name || &apos;Tom&apos;;</div><div class="line">&#125;</div><div class="line"></div><div class="line">// Test Code</div><div class="line">var cat = new Cat();</div><div class="line">console.log(cat.name);</div><div class="line">console.log(cat.sleep());</div><div class="line">console.log(cat instanceof Animal); // false</div><div class="line">console.log(cat instanceof Cat); // true</div></pre></td></tr></table></figure>
-</li>
-<li><p>特点：</p>
-<ol>
-<li>解决了1中，子类实例共享父类引用属性的问题</li>
-<li>创建子类实例时，可以向父类传递参数</li>
-<li>可以实现多继承（call多个父类对象）</li>
-</ol>
-</li>
-<li>缺点：<ol>
-<li>实例并不是父类的实例，只是子类的实例</li>
-<li>只能继承父类的实例属性和方法，不能继承原型属性/方法</li>
-<li>无法实现函数复用，每个子类都有父类实例函数的副本，影响性能</li>
-</ol>
-</li>
-</ul>
-<hr>
-<h3 id="实例继承"><a href="#实例继承" class="headerlink" title="实例继承"></a>实例继承</h3><ul>
-<li><p>核心：为父类实例添加新特性，作为子类实例返回</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div></pre></td><td class="code"><pre><div class="line">function Cat(name)&#123;</div><div class="line">  var instance = new Animal();</div><div class="line">  instance.name = name || &apos;Tom&apos;;</div><div class="line">  return instance;</div><div class="line">&#125;</div><div class="line"></div><div class="line">// Test Code</div><div class="line">var cat = new Cat();</div><div class="line">console.log(cat.name);</div><div class="line">console.log(cat.sleep());</div><div class="line">console.log(cat instanceof Animal); // true</div><div class="line">console.log(cat instanceof Cat); // false</div></pre></td></tr></table></figure>
-</li>
-<li><p>特点：<br>  1.不限制调用方式，不管是new 子类()还是子类(),返回的对象具有相同的效果</p>
-</li>
-<li>缺点：<br>  1.实例是父类的实例，不是子类的实例<br>  2.不支持多继承</li>
-</ul>
-<hr>
-<h2 id="html5本地存储"><a href="#html5本地存储" class="headerlink" title="html5本地存储"></a>html5本地存储</h2><h3 id="1-sessionStorage"><a href="#1-sessionStorage" class="headerlink" title="1 sessionStorage"></a>1 sessionStorage</h3><pre><code>1. cookie的存储限制在了4k之内，相比来说，session storage有了更大的存储空间，但至于具体多大，这要参照浏览器厂商的具体实现。
-2. cookie有一个机制，就是在每次客户端请求服务器的时候都会将cookie发送给服务器，这无疑会做很多不必要的操作，因为并不是每次请求服务器都需要cookie的所有信息，而session storage很好的解决了这个问题，它不是采取自动发送的方式，这样就减少了不必要的工作。
-3. 通过sessionStorage所存储数据的生命周期，和Session类似，关闭浏览器（或标签页）后数据就不存在了。但刷新页面或使用“前进”、“后退按钮”后sessionStorage仍然存在。
-4. session storage每个窗口的值都是独立的（每个窗口都有自己的数据），它的数据会随着窗口的关闭而消失，窗口间的sessionStorage也是不可以共享的。
-5. setItem中的key、value使用的是字符串的形式进行存储的。也就是说如果有如下的代码：setItem(‘count’, 1);通过getItem(‘count’) + 5 得到的将不是预期的6(整数)，而是’16’(字符串)。
-6. 再次使用setItem设置已经存在的key的value时，新的值将替代旧的值。
-7. 当存储中的数据发生改变时，会触发相应的事件（window.onstorage），但目前各浏览器对此事件的支持并不完善，暂时可以忽略。
-</code></pre><hr>
-<h3 id="2-localStorage"><a href="#2-localStorage" class="headerlink" title="2 localStorage"></a>2 localStorage</h3><pre><code>1. local storage把只把数据存储在了客户端使用，不会发送的服务器上（除非你故意这样做）。
-2. 而且对于某一个域下来说，local storage是共享的（多个窗口共享一个“数据库”）。
-3. localStorage用于持久化的本地存储，除非主动删除数据，否则数据是永远不会过期的
-</code></pre><hr>
-<h3 id="3-sessionStorage和localStorage"><a href="#3-sessionStorage和localStorage" class="headerlink" title="3 sessionStorage和localStorage"></a>3 sessionStorage和localStorage</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">window.sessionStorage.name = &apos;rainman&apos;;           // 赋值    </div><div class="line">window.sessionStorage.setItem(&apos;name&apos;,&apos;cnblogs&apos;);  // 赋值    </div><div class="line">window.sessionStorage.getItem(&apos;name&apos;);            // 取值    </div><div class="line">window.sessionStorage.removeItem(&apos;name&apos;);         // 移除值    </div><div class="line">window.sessionStorage.clear();                    // 删除所有sessionStorage</div></pre></td></tr></table></figure>
-<p>它们的方法是都一样的</p>
+          闭包是什么？
+函数嵌套函数。
+内部变量或参数能访问外部变量和参数，外部不能访问内部变量或参数。
+内部变量或参数始终保存在内存中。
+适用于封装函数，防止变量污染。
+但内部参数过多的话会因为内存而出现卡顿。
 
-          
+
+盒子模型标准盒子模型：margin(外边距)+padding(内边距)+border(边框)
+          ...
+          <!--noindex-->
+          <div class="post-button text-center">
+            <a class="btn" href="/2017/04/22/bibao/#more" rel="contents">
+              阅读全文 &raquo;
+            </a>
+          </div>
+          <!--/noindex-->
         
       
     </div>
@@ -503,9 +484,9 @@
                 <i class="fa fa-calendar-o"></i>
               </span>
               
-                <span class="post-meta-item-text">Veröffentlicht am</span>
+                <span class="post-meta-item-text">发表于</span>
               
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2017-04-18T18:14:28+08:00">
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-04-18T18:14:28+08:00">
                 2017-04-18
               </time>
             
@@ -515,6 +496,28 @@
             
           </span>
 
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/HEXO/" itemprop="url" rel="index">
+                    <span itemprop="name">HEXO</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
           
 
           
@@ -542,40 +545,28 @@
       
         
           
-            <h2 id="为什么要搭建博客系统"><a href="#为什么要搭建博客系统" class="headerlink" title="为什么要搭建博客系统"></a>为什么要搭建博客系统</h2><ul>
-<li>有助于养成良好的习惯</li>
-<li>有助于学习记录</li>
-<li>有助于提高薪资</li>
-</ul>
-<hr>
-<h2 id="环境准备"><a href="#环境准备" class="headerlink" title="环境准备"></a>环境准备</h2><ul>
-<li>安装git</li>
-<li>安装NodeJS</li>
-</ul>
-<hr>
-<h2 id="安装"><a href="#安装" class="headerlink" title="安装"></a>安装</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">npm install hexo-cli -g</div></pre></td></tr></table></figure>
-<hr>
-<h2 id="初始化"><a href="#初始化" class="headerlink" title="初始化"></a>初始化</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">hexo init &lt;folder&gt; </div><div class="line">cd &lt;folder&gt;</div><div class="line">npm install</div><div class="line">hexo server -p &lt;port&gt;</div></pre></td></tr></table></figure>
-<hr>
-<h2 id="如何使用ssh链接到github"><a href="#如何使用ssh链接到github" class="headerlink" title="如何使用ssh链接到github"></a>如何使用ssh链接到github</h2><ul>
-<li>找到git根目录，双击打开git-bash.exe</li>
-<li>输入 cd ~/.ssh</li>
-<li>生成一个新的 ssh key   ssh-keygen -t rsa -C “邮箱”</li>
-<li>验证是否能够链接到github ssh -T git@github.com</li>
-</ul>
-<hr>
-<h2 id="把初始化的博客系统，上传到github"><a href="#把初始化的博客系统，上传到github" class="headerlink" title="把初始化的博客系统，上传到github"></a>把初始化的博客系统，上传到github</h2><ul>
-<li>修改我们博客系统根目录里面的配置文件（_config.yml)</li>
-<li>安装hexo-deployer-git插件（npm安装）</li>
-<li>上传（hexo deploy -g）</li>
-</ul>
-<hr>
-<h2 id="替换主题，暂时使用jacman主题"><a href="#替换主题，暂时使用jacman主题" class="headerlink" title="替换主题，暂时使用jacman主题"></a>替换主题，暂时使用jacman主题</h2><ul>
-<li>使用git下载主题到博客根目录</li>
-<li>在_config中配置主题</li>
-</ul>
+          为什么要搭建博客系统
+有助于养成良好的习惯
+有助于学习记录
+有助于提高薪资
 
-          
+
+环境准备
+安装git
+安装NodeJS
+
+
+安装1npm install hexo-cli -g
+
+初始化1234hexo init &lt;folder&gt; cd &lt;folder&gt;npm install
+          ...
+          <!--noindex-->
+          <div class="post-button text-center">
+            <a class="btn" href="/2017/04/18/shuhao-ouba/#more" rel="contents">
+              阅读全文 &raquo;
+            </a>
+          </div>
+          <!--/noindex-->
         
       
     </div>
@@ -654,9 +645,9 @@
                 <i class="fa fa-calendar-o"></i>
               </span>
               
-                <span class="post-meta-item-text">Veröffentlicht am</span>
+                <span class="post-meta-item-text">发表于</span>
               
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2017-04-15T17:20:42+08:00">
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-04-15T17:20:42+08:00">
                 2017-04-15
               </time>
             
@@ -666,6 +657,28 @@
             
           </span>
 
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/感触/" itemprop="url" rel="index">
+                    <span itemprop="name">感触</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
           
 
           
@@ -693,8 +706,15 @@
       
         
           
-            <h3 id="无论人性还是人心，都是不能考验的，因为当你开始想方法去考验他的时候说明你已经开始怀疑。而怀疑是一切不幸的根源。"><a href="#无论人性还是人心，都是不能考验的，因为当你开始想方法去考验他的时候说明你已经开始怀疑。而怀疑是一切不幸的根源。" class="headerlink" title="无论人性还是人心，都是不能考验的，因为当你开始想方法去考验他的时候说明你已经开始怀疑。而怀疑是一切不幸的根源。"></a>无论人性还是人心，都是不能考验的，因为当你开始想方法去考验他的时候说明你已经开始怀疑。而怀疑是一切不幸的根源。</h3>
+          无论人性还是人心，都是不能考验的，因为当你开始想方法去考验他的时候说明你已经开始怀疑。而怀疑是一切不幸的根源。
           
+          <!--noindex-->
+          <div class="post-button text-center">
+            <a class="btn" href="/2017/04/15/shuhao/#more" rel="contents">
+              阅读全文 &raquo;
+            </a>
+          </div>
+          <!--/noindex-->
         
       
     </div>
@@ -773,13 +793,31 @@
             <div class="site-state-item site-state-posts">
               <a href="/archives">
                 <span class="site-state-item-count">3</span>
-                <span class="site-state-item-name">Artikel</span>
+                <span class="site-state-item-name">日志</span>
               </a>
             </div>
           
 
           
+            
+            
+            <div class="site-state-item site-state-categories">
+              <a href="/categories/index.html">
+                <span class="site-state-item-count">3</span>
+                <span class="site-state-item-name">分类</span>
+              </a>
+            </div>
+          
 
+          
+            
+            
+            <div class="site-state-item site-state-tags">
+              <a href="/tags/index.html">
+                <span class="site-state-item-count">3</span>
+                <span class="site-state-item-name">标签</span>
+              </a>
+            </div>
           
 
         </nav>
@@ -790,7 +828,7 @@
           
             
               <span class="links-of-author-item">
-                <a href="https://github.com" target="_blank" title="GitHub">
+                <a href="https://github.com/your-user-name" target="_blank" title="GitHub">
                   
                     <i class="fa fa-fw fa-github"></i>
                   
@@ -808,7 +846,7 @@
               </span>
             
               <span class="links-of-author-item">
-                <a href="http://weibo.com/u/5591212194/home?wvr=5" target="_blank" title="微博">
+                <a href="http://http://weibo.com/u/5591212194/home" target="_blank" title="微博">
                   
                     <i class="fa fa-fw fa-globe"></i>
                   
@@ -823,6 +861,20 @@
         
 
         
+        
+          <div class="links-of-blogroll motion-element links-of-blogroll-inline">
+            <div class="links-of-blogroll-title">
+              <i class="fa  fa-fw fa-globe"></i>
+              友情链接
+            </div>
+            <ul class="links-of-blogroll-list">
+              
+                <li class="links-of-blogroll-item">
+                  <a href="http://www.baidu.com/" title="百度" target="_blank">百度</a>
+                </li>
+              
+            </ul>
+          </div>
         
 
         
@@ -856,11 +908,11 @@
 
 
 <div class="powered-by">
-  Erstellt mit  <a class="theme-link" href="https://hexo.io">Hexo</a>
+  由 <a class="theme-link" href="https://hexo.io">Hexo</a> 强力驱动
 </div>
 
 <div class="theme-info">
-  Theme -
+  主题 -
   <a class="theme-link" href="https://github.com/iissnan/hexo-theme-next">
     NexT.Mist
   </a>

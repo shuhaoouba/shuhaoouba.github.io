@@ -5,7 +5,7 @@
   
 
 
-<html class="theme-next mist use-motion" lang="zh-CH">
+<html class="theme-next mist use-motion" lang="zh-Hans">
 <head>
   <meta charset="UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=edge" />
@@ -92,7 +92,7 @@
 <link href="/css/main.css?v=5.1.1" rel="stylesheet" type="text/css" />
 
 
-  <meta name="keywords" content="Hexo, NexT" />
+  <meta name="keywords" content="javascript," />
 
 
 
@@ -109,13 +109,13 @@
 
 
 <meta name="description" content="闭包是什么？ 函数嵌套函数。 内部变量或参数能访问外部变量和参数，外部不能访问内部变量或参数。 内部变量或参数始终保存在内存中。 适用于封装函数，防止变量污染。 但内部参数过多的话会因为内存而出现卡顿。   盒子模型标准盒子模型：margin(外边距)+padding(内边距)+border(边框)+content(内容)，content部分不包含其他部分。IE盒子模型：margin(外边距)+p">
-<meta name="keywords">
+<meta name="keywords" content="javascript">
 <meta property="og:type" content="article">
 <meta property="og:title" content="HTML+css+JavaScript">
 <meta property="og:url" content="http://shuhaoouba.github.io/2017/04/22/bibao/index.html">
 <meta property="og:site_name" content="S.">
 <meta property="og:description" content="闭包是什么？ 函数嵌套函数。 内部变量或参数能访问外部变量和参数，外部不能访问内部变量或参数。 内部变量或参数始终保存在内存中。 适用于封装函数，防止变量污染。 但内部参数过多的话会因为内存而出现卡顿。   盒子模型标准盒子模型：margin(外边距)+padding(内边距)+border(边框)+content(内容)，content部分不包含其他部分。IE盒子模型：margin(外边距)+p">
-<meta property="og:updated_time" content="2017-04-22T07:49:14.874Z">
+<meta property="og:updated_time" content="2017-04-22T12:33:12.897Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="HTML+css+JavaScript">
 <meta name="twitter:description" content="闭包是什么？ 函数嵌套函数。 内部变量或参数能访问外部变量和参数，外部不能访问内部变量或参数。 内部变量或参数始终保存在内存中。 适用于封装函数，防止变量污染。 但内部参数过多的话会因为内存而出现卡顿。   盒子模型标准盒子模型：margin(外边距)+padding(内边距)+border(边框)+content(内容)，content部分不包含其他部分。IE盒子模型：margin(外边距)+p">
@@ -127,12 +127,12 @@
   var CONFIG = {
     root: '/',
     scheme: 'Mist',
-    sidebar: {"position":"left","display":"post","offset":12,"offset_float":0,"b2t":false,"scrollpercent":false},
+    sidebar: {"position":"right","display":"always","offset":12,"offset_float":0,"b2t":false,"scrollpercent":false},
     fancybox: true,
     motion: true,
     duoshuo: {
       userId: '0',
-      author: 'Author'
+      author: '博主'
     },
     algolia: {
       applicationID: '',
@@ -155,7 +155,7 @@
   <title>HTML+css+JavaScript | S.</title>
 </head>
 
-<body itemscope itemtype="http://schema.org/WebPage" lang="zh-CH">
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
 
   
 
@@ -177,7 +177,7 @@
     
   
 
-  <div class="container sidebar-position-left page-post-detail ">
+  <div class="container sidebar-position-right page-post-detail ">
     <div class="headband"></div>
 
     <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
@@ -218,7 +218,17 @@
             
               <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
             
-            Startseite
+            首页
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-categories">
+          <a href="/categories" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-th"></i> <br />
+            
+            分类
           </a>
         </li>
       
@@ -228,7 +238,7 @@
             
               <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
             
-            Archiv
+            归档
           </a>
         </li>
       
@@ -238,7 +248,17 @@
             
               <i class="menu-item-icon fa fa-fw fa-tags"></i> <br />
             
-            Tags
+            标签
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-commonweal">
+          <a href="/404.html" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-heartbeat"></i> <br />
+            
+            公益404
           </a>
         </li>
       
@@ -305,9 +325,9 @@
                 <i class="fa fa-calendar-o"></i>
               </span>
               
-                <span class="post-meta-item-text">Veröffentlicht am</span>
+                <span class="post-meta-item-text">发表于</span>
               
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2017-04-22T15:30:42+08:00">
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-04-22T15:30:42+08:00">
                 2017-04-22
               </time>
             
@@ -317,6 +337,28 @@
             
           </span>
 
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/web前端/" itemprop="url" rel="index">
+                    <span itemprop="name">web前端</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
           
 
           
@@ -404,18 +446,22 @@
 <li>缺点：<br>  1.实例是父类的实例，不是子类的实例<br>  2.不支持多继承</li>
 </ul>
 <hr>
-<h2 id="html5本地存储"><a href="#html5本地存储" class="headerlink" title="html5本地存储"></a>html5本地存储</h2><h3 id="1-sessionStorage"><a href="#1-sessionStorage" class="headerlink" title="1 sessionStorage"></a>1 sessionStorage</h3><pre><code>1. cookie的存储限制在了4k之内，相比来说，session storage有了更大的存储空间，但至于具体多大，这要参照浏览器厂商的具体实现。
-2. cookie有一个机制，就是在每次客户端请求服务器的时候都会将cookie发送给服务器，这无疑会做很多不必要的操作，因为并不是每次请求服务器都需要cookie的所有信息，而session storage很好的解决了这个问题，它不是采取自动发送的方式，这样就减少了不必要的工作。
-3. 通过sessionStorage所存储数据的生命周期，和Session类似，关闭浏览器（或标签页）后数据就不存在了。但刷新页面或使用“前进”、“后退按钮”后sessionStorage仍然存在。
-4. session storage每个窗口的值都是独立的（每个窗口都有自己的数据），它的数据会随着窗口的关闭而消失，窗口间的sessionStorage也是不可以共享的。
-5. setItem中的key、value使用的是字符串的形式进行存储的。也就是说如果有如下的代码：setItem(‘count’, 1);通过getItem(‘count’) + 5 得到的将不是预期的6(整数)，而是’16’(字符串)。
-6. 再次使用setItem设置已经存在的key的value时，新的值将替代旧的值。
-7. 当存储中的数据发生改变时，会触发相应的事件（window.onstorage），但目前各浏览器对此事件的支持并不完善，暂时可以忽略。
-</code></pre><hr>
-<h3 id="2-localStorage"><a href="#2-localStorage" class="headerlink" title="2 localStorage"></a>2 localStorage</h3><pre><code>1. local storage把只把数据存储在了客户端使用，不会发送的服务器上（除非你故意这样做）。
-2. 而且对于某一个域下来说，local storage是共享的（多个窗口共享一个“数据库”）。
-3. localStorage用于持久化的本地存储，除非主动删除数据，否则数据是永远不会过期的
-</code></pre><hr>
+<h2 id="html5本地存储"><a href="#html5本地存储" class="headerlink" title="html5本地存储"></a>html5本地存储</h2><h3 id="1-sessionStorage"><a href="#1-sessionStorage" class="headerlink" title="1 sessionStorage"></a>1 sessionStorage</h3><ol>
+<li>cookie的存储限制在了4k之内，相比来说，session storage有了更大的存储空间，但至于具体多大，这要参照浏览器厂商的具体实现。</li>
+<li>cookie有一个机制，就是在每次客户端请求服务器的时候都会将cookie发送给服务器，这无疑会做很多不必要的操作，因为并不是每次请求服务器都需要cookie的所有信息，而session storage很好的解决了这个问题，它不是采取自动发送的方式，这样就减少了不必要的工作。</li>
+<li>通过sessionStorage所存储数据的生命周期，和Session类似，关闭浏览器（或标签页）后数据就不存在了。但刷新页面或使用“前进”、“后退按钮”后sessionStorage仍然存在。</li>
+<li>session storage每个窗口的值都是独立的（每个窗口都有自己的数据），它的数据会随着窗口的关闭而消失，窗口间的sessionStorage也是不可以共享的。</li>
+<li>setItem中的key、value使用的是字符串的形式进行存储的。也就是说如果有如下的代码：setItem(‘count’, 1);通过getItem(‘count’) + 5 得到的将不是预期的6(整数)，而是’16’(字符串)。</li>
+<li>再次使用setItem设置已经存在的key的value时，新的值将替代旧的值。</li>
+<li>当存储中的数据发生改变时，会触发相应的事件（window.onstorage），但目前各浏览器对此事件的支持并不完善，暂时可以忽略。</li>
+</ol>
+<hr>
+<h3 id="2-localStorage"><a href="#2-localStorage" class="headerlink" title="2 localStorage"></a>2 localStorage</h3><ol>
+<li>local storage把只把数据存储在了客户端使用，不会发送的服务器上（除非你故意这样做）。</li>
+<li>而且对于某一个域下来说，local storage是共享的（多个窗口共享一个“数据库”）。</li>
+<li>localStorage用于持久化的本地存储，除非主动删除数据，否则数据是永远不会过期的</li>
+</ol>
+<hr>
 <h3 id="3-sessionStorage和localStorage"><a href="#3-sessionStorage和localStorage" class="headerlink" title="3 sessionStorage和localStorage"></a>3 sessionStorage和localStorage</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">window.sessionStorage.name = &apos;rainman&apos;;           // 赋值    </div><div class="line">window.sessionStorage.setItem(&apos;name&apos;,&apos;cnblogs&apos;);  // 赋值    </div><div class="line">window.sessionStorage.getItem(&apos;name&apos;);            // 取值    </div><div class="line">window.sessionStorage.removeItem(&apos;name&apos;);         // 移除值    </div><div class="line">window.sessionStorage.clear();                    // 删除所有sessionStorage</div></pre></td></tr></table></figure>
 <p>它们的方法是都一样的</p>
 
@@ -444,6 +490,12 @@
     </div>
 
     <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/javascript/" rel="tag"># javascript</a>
+          
+        </div>
       
 
       
@@ -511,10 +563,10 @@
       
         <ul class="sidebar-nav motion-element">
           <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
-            Inhaltsverzeichnis
+            文章目录
           </li>
           <li class="sidebar-nav-overview" data-target="site-overview">
-            Übersicht
+            站点概览
           </li>
         </ul>
       
@@ -535,13 +587,31 @@
             <div class="site-state-item site-state-posts">
               <a href="/archives">
                 <span class="site-state-item-count">3</span>
-                <span class="site-state-item-name">Artikel</span>
+                <span class="site-state-item-name">日志</span>
               </a>
             </div>
           
 
           
+            
+            
+            <div class="site-state-item site-state-categories">
+              <a href="/categories/index.html">
+                <span class="site-state-item-count">3</span>
+                <span class="site-state-item-name">分类</span>
+              </a>
+            </div>
+          
 
+          
+            
+            
+            <div class="site-state-item site-state-tags">
+              <a href="/tags/index.html">
+                <span class="site-state-item-count">3</span>
+                <span class="site-state-item-name">标签</span>
+              </a>
+            </div>
           
 
         </nav>
@@ -552,7 +622,7 @@
           
             
               <span class="links-of-author-item">
-                <a href="https://github.com" target="_blank" title="GitHub">
+                <a href="https://github.com/your-user-name" target="_blank" title="GitHub">
                   
                     <i class="fa fa-fw fa-github"></i>
                   
@@ -570,7 +640,7 @@
               </span>
             
               <span class="links-of-author-item">
-                <a href="http://weibo.com/u/5591212194/home?wvr=5" target="_blank" title="微博">
+                <a href="http://http://weibo.com/u/5591212194/home" target="_blank" title="微博">
                   
                     <i class="fa fa-fw fa-globe"></i>
                   
@@ -585,6 +655,20 @@
         
 
         
+        
+          <div class="links-of-blogroll motion-element links-of-blogroll-inline">
+            <div class="links-of-blogroll-title">
+              <i class="fa  fa-fw fa-globe"></i>
+              友情链接
+            </div>
+            <ul class="links-of-blogroll-list">
+              
+                <li class="links-of-blogroll-item">
+                  <a href="http://www.baidu.com/" title="百度" target="_blank">百度</a>
+                </li>
+              
+            </ul>
+          </div>
         
 
         
@@ -634,11 +718,11 @@
 
 
 <div class="powered-by">
-  Erstellt mit  <a class="theme-link" href="https://hexo.io">Hexo</a>
+  由 <a class="theme-link" href="https://hexo.io">Hexo</a> 强力驱动
 </div>
 
 <div class="theme-info">
-  Theme -
+  主题 -
   <a class="theme-link" href="https://github.com/iissnan/hexo-theme-next">
     NexT.Mist
   </a>
