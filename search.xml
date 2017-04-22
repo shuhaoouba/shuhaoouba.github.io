@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<search>
+  
+    
+    <entry>
+      <title><![CDATA[HTML+css+JavaScript]]></title>
+      <url>%2F2017%2F04%2F22%2Fbibao%2F</url>
+      <content type="text"><![CDATA[闭包是什么？ 函数嵌套函数。 内部变量或参数能访问外部变量和参数，外部不能访问内部变量或参数。 内部变量或参数始终保存在内存中。 适用于封装函数，防止变量污染。 但内部参数过多的话会因为内存而出现卡顿。 盒子模型标准盒子模型：margin(外边距)+padding(内边距)+border(边框)+content(内容)，content部分不包含其他部分。IE盒子模型：margin(外边距)+padding(内边距)+border(边框)+content(内容)，content部分包含了padding和border。 JavaScript原型链 原型链的形成真正是靠proto 而非prototype，当JS引擎执行对象的方法时，先查找对象本身是否存在该方法，如果不存在，会在原型链上查找，但不会查找自身的prototype。 一个对象的proto记录着自己的原型链，决定了自身的数据类型，改变proto就等于改变对象的数据类型。 函数的prototype不属于自身的原型链，它是子类创建的核心，决定了子类的数据类型，是连接子类原型链的桥梁。 在原型对象上定义方法和属性的目的是为了被子类继承和使用。 JavaScript面向对象 一般具有封装，继承，多态的特性 创建对象有工厂模式，构造函数模式，原型模式，组合构造函数及原型模式，动态原型模式。 JavaScript继承原型链继承 核心： 将父类的实例作为子类的原型 123456789101112function Cat()&#123; &#125;Cat.prototype = new Animal();Cat.prototype.name = &apos;cat&apos;;// Test Codevar cat = new Cat();console.log(cat.name);console.log(cat.eat(&apos;fish&apos;));console.log(cat.sleep());console.log(cat instanceof Animal); //true console.log(cat instanceof Cat); //true 特点： 非常纯粹的继承关系，实例是子类的实例，也是父类的实例2.父类新增原型方法/原型属性，子类都能访问到3.简单，易于实现 缺点： 1.要想为子类新增属性和方法，必须要在new Animal()这样的语句之后执行，不能放到构造器中 2.无法实现多继承 3.来自原型对象的引用属性是所有实例共享的（详细请看附录代码： 示例1） 4.创建子类实例时，无法向父类构造函数传参 构造函数继承 核心：使用父类的构造函数来增强子类实例，等于是复制父类的实例属性给子类（没用到原型） 1234567891011function Cat(name)&#123; Animal.call(this); this.name = name || &apos;Tom&apos;;&#125;// Test Codevar cat = new Cat();console.log(cat.name);console.log(cat.sleep());console.log(cat instanceof Animal); // falseconsole.log(cat instanceof Cat); // true 特点： 解决了1中，子类实例共享父类引用属性的问题 创建子类实例时，可以向父类传递参数 可以实现多继承（call多个父类对象） 缺点： 实例并不是父类的实例，只是子类的实例 只能继承父类的实例属性和方法，不能继承原型属性/方法 无法实现函数复用，每个子类都有父类实例函数的副本，影响性能 实例继承 核心：为父类实例添加新特性，作为子类实例返回 123456789101112function Cat(name)&#123; var instance = new Animal(); instance.name = name || &apos;Tom&apos;; return instance;&#125;// Test Codevar cat = new Cat();console.log(cat.name);console.log(cat.sleep());console.log(cat instanceof Animal); // trueconsole.log(cat instanceof Cat); // false 特点： 1.不限制调用方式，不管是new 子类()还是子类(),返回的对象具有相同的效果 缺点： 1.实例是父类的实例，不是子类的实例 2.不支持多继承 html5本地存储1 sessionStorage1. cookie的存储限制在了4k之内，相比来说，session storage有了更大的存储空间，但至于具体多大，这要参照浏览器厂商的具体实现。 2. cookie有一个机制，就是在每次客户端请求服务器的时候都会将cookie发送给服务器，这无疑会做很多不必要的操作，因为并不是每次请求服务器都需要cookie的所有信息，而session storage很好的解决了这个问题，它不是采取自动发送的方式，这样就减少了不必要的工作。 3. 通过sessionStorage所存储数据的生命周期，和Session类似，关闭浏览器（或标签页）后数据就不存在了。但刷新页面或使用“前进”、“后退按钮”后sessionStorage仍然存在。 4. session storage每个窗口的值都是独立的（每个窗口都有自己的数据），它的数据会随着窗口的关闭而消失，窗口间的sessionStorage也是不可以共享的。 5. setItem中的key、value使用的是字符串的形式进行存储的。也就是说如果有如下的代码：setItem(‘count’, 1);通过getItem(‘count’) + 5 得到的将不是预期的6(整数)，而是’16’(字符串)。 6. 再次使用setItem设置已经存在的key的value时，新的值将替代旧的值。 7. 当存储中的数据发生改变时，会触发相应的事件（window.onstorage），但目前各浏览器对此事件的支持并不完善，暂时可以忽略。 2 localStorage1. local storage把只把数据存储在了客户端使用，不会发送的服务器上（除非你故意这样做）。 2. 而且对于某一个域下来说，local storage是共享的（多个窗口共享一个“数据库”）。 3. localStorage用于持久化的本地存储，除非主动删除数据，否则数据是永远不会过期的 3 sessionStorage和localStorage12345window.sessionStorage.name = &apos;rainman&apos;; // 赋值 window.sessionStorage.setItem(&apos;name&apos;,&apos;cnblogs&apos;); // 赋值 window.sessionStorage.getItem(&apos;name&apos;); // 取值 window.sessionStorage.removeItem(&apos;name&apos;); // 移除值 window.sessionStorage.clear(); // 删除所有sessionStorage 它们的方法是都一样的]]></content>
+    </entry>
+
+    
+    <entry>
+      <title><![CDATA[使用hexo搭建博客系统]]></title>
+      <url>%2F2017%2F04%2F18%2Fshuhao-ouba%2F</url>
+      <content type="text"><![CDATA[为什么要搭建博客系统 有助于养成良好的习惯 有助于学习记录 有助于提高薪资 环境准备 安装git 安装NodeJS 安装1npm install hexo-cli -g 初始化1234hexo init &lt;folder&gt; cd &lt;folder&gt;npm installhexo server -p &lt;port&gt; 如何使用ssh链接到github 找到git根目录，双击打开git-bash.exe 输入 cd ~/.ssh 生成一个新的 ssh key ssh-keygen -t rsa -C “邮箱” 验证是否能够链接到github ssh -T git@github.com 把初始化的博客系统，上传到github 修改我们博客系统根目录里面的配置文件（_config.yml) 安装hexo-deployer-git插件（npm安装） 上传（hexo deploy -g） 替换主题，暂时使用jacman主题 使用git下载主题到博客根目录 在_config中配置主题]]></content>
+    </entry>
+
+    
+    <entry>
+      <title><![CDATA[感想]]></title>
+      <url>%2F2017%2F04%2F15%2Fshuhao%2F</url>
+      <content type="text"><![CDATA[无论人性还是人心，都是不能考验的，因为当你开始想方法去考验他的时候说明你已经开始怀疑。而怀疑是一切不幸的根源。]]></content>
+    </entry>
+
+    
+  
+  
+</search>
