@@ -203,7 +203,7 @@
 <li>创建对象有工厂模式，构造函数模式，原型模式，组合构造函数及原型模式，动态原型模式。</li>
 </ol>
 <hr>
-<h2 id="JavaScript继承"><a href="#JavaScript继承" class="headerlink" title="JavaScript继承"></a>JavaScript继承</h2><h3 id="1-原型链继承"><a href="#1-原型链继承" class="headerlink" title="1.原型链继承"></a>1.原型链继承</h3><ul>
+<h2 id="JavaScript继承"><a href="#JavaScript继承" class="headerlink" title="JavaScript继承"></a>JavaScript继承</h2><h3 id="原型链继承"><a href="#原型链继承" class="headerlink" title="原型链继承"></a>原型链继承</h3><ul>
 <li><p>核心： 将父类的实例作为子类的原型</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div></pre></td><td class="code"><pre><div class="line">function Cat()&#123; </div><div class="line">&#125;</div><div class="line">Cat.prototype = new Animal();</div><div class="line">Cat.prototype.name = &apos;cat&apos;;</div><div class="line"></div><div class="line">//　Test Code</div><div class="line">var cat = new Cat();</div><div class="line">console.log(cat.name);</div><div class="line">console.log(cat.eat(&apos;fish&apos;));</div><div class="line">console.log(cat.sleep());</div><div class="line">console.log(cat instanceof Animal); //true </div><div class="line">console.log(cat instanceof Cat); //true</div></pre></td></tr></table></figure>
 </li>
